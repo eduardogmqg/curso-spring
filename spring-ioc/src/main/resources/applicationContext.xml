@@ -8,8 +8,21 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
+
+    <!-- Define the dependency bean -->
+    <bean id="myFortuneService" class="space.pentaquark.springdemo.HappyFortuneService"/>
     <!--<bean id="myCoach" class="space.pentaquark.springdemo.BaseballCoach"/>-->
-    <bean id="myCoach" class="space.pentaquark.springdemo.TrackCoach"/>
+    <bean id="myCoach" class="space.pentaquark.springdemo.TrackCoach">
+
+        <!-- set up the constructor injection -->
+        <constructor-arg ref="myFortuneService"/>
+
+    </bean>
+
+    <bean id="myCricketCoach" class="space.pentaquark.springdemo.CricketCoach">
+        <!-- Set up setter injection -->
+        <property name="fortuneService" ref="myFortuneService"/>
+    </bean>
 
 </beans>
 
