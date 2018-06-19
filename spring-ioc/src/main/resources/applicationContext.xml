@@ -22,6 +22,9 @@
     <bean id="myCricketCoach" class="space.pentaquark.springdemo.CricketCoach">
         <!-- Set up setter injection -->
         <property name="fortuneService" ref="myFortuneService"/>
+        <!-- Inject Literal Values -->
+        <property name="emailAddress" value="cricket@gmail.com"/>
+        <property name="team" value="Sunrisers Hyderabad"/>
     </bean>
 
 </beans>
