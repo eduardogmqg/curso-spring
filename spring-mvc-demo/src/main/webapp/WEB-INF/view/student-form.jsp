@@ -21,11 +21,25 @@
         <p>
             <label>Country</label>
             <form:select path="country">
-                <form:option value="Brazil" label="Brazil"/>
+                <form:options items="${student.countryOptions}"/>
+                <%--<form:option value="Brazil" label="Brazil"/>
                 <form:option value="France" label="France"/>
                 <form:option value="Germany" label="Germany"/>
-                <form:option value="Spain" label="Spain"/>
+                <form:option value="Spain" label="Spain"/>--%>
             </form:select>
+        </p>
+        <div>
+            Favorite Language: <br>
+            Java <form:radiobutton path="favouriteLanguage" value="Java" />
+            C# <form:radiobutton path="favouriteLanguage" value="C#" />
+            PHP <form:radiobutton path="favouriteLanguage" value="PHP" />
+            Ruby <form:radiobutton path="favouriteLanguage" value="Ruby" />
+        </div>
+        <p>
+            <label>Operating Systems: </label>
+            Linux <form:checkbox path="operatingSystems" value="Linux" />
+            Mac Os <form:checkbox path="operatingSystems" value="Mac Os" />
+            MS Windows <form:checkbox path="operatingSystems" value="MS Windows" />
         </p>
         <input type="submit" value="Submit">
 
