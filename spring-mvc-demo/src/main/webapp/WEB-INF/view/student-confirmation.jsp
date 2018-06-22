@@ -7,7 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Student Confirmation</title>
 </head>
+
 <body>
-The student is confirmed: ${student.firstName} ${student.lastName}
+<p>
+    The student is confirmed: ${student.firstName} ${student.lastName}
+</p>
+<p>
+    Country: ${student.country}
+</p>
 </body>
 </html>

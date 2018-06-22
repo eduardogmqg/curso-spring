@@ -18,6 +18,15 @@
             <label>Last Name:</label>
             <form:input path="lastName" />
         </p>
+        <p>
+            <label>Country</label>
+            <form:select path="country">
+                <form:option value="Brazil" label="Brazil"/>
+                <form:option value="France" label="France"/>
+                <form:option value="Germany" label="Germany"/>
+                <form:option value="Spain" label="Spain"/>
+            </form:select>
+        </p>
         <input type="submit" value="Submit">
 
     </form:form>
